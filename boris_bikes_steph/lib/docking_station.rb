@@ -16,7 +16,7 @@ class DockingStation
 	end
 
 	def notify_van(van, bike)
-		van.notification if has_broken?
+		van.notification! if has_broken?
 		@bikes.delete(bike)
 	end
 

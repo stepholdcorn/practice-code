@@ -15,7 +15,7 @@ describe DockingStation do
 	it 'should tell the van if it has a broken bike' do
 		docking_station.dock(bike)
 		allow(docking_station).to receive(:has_broken?) { true }
-		allow(van).to receive(:notification)
+		allow(van).to receive(:notification!)
 		docking_station.notify_van(van, bike)
 		expect(docking_station).to be_empty
 	end
