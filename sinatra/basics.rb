@@ -1,3 +1,6 @@
+# Tutorial from:
+# http://code.tutsplus.com/series/singing-with-sinatra--net-19113
+
 require 'rubygems'
 require 'sinatra'
 
@@ -35,4 +38,8 @@ end
 
 get '/decrypt/:secret' do
 	params[:secret].reverse
+end
+
+not_found do
+	halt 404, 'Page not found'
 end
